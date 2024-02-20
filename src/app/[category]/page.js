@@ -140,7 +140,7 @@ function Home({ params }) {
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
-                            {p?.description?.map((d) => <div className="">
+                            {p?.description?.map((d,id) => <div className="" key={id}>
                                 {d.tagName} : {d.tagValue}
                             </div>)}
                             {/* <div className="">
