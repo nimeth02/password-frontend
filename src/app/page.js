@@ -15,7 +15,7 @@ function Home() {
   },[])
   return (
     <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-20 md:p-40 w-full gap-10'>
-      {category.map((c)=><Link href={`/${c.title}`}>
+      {category.map((c,id)=><Link key={id} href={`/${c.title}`}>
     <CardOne title={c.title} icon={c.icon}/>
     </Link>)}
 
