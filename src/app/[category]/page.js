@@ -90,7 +90,7 @@ function Home({ params }) {
                 setPasswordlist(data)
             } catch (error) {
                 console.log(error)
-                if(error.response.status == 401)router.push('/signin')
+                if(error.response.status == 401)router.push('/')
                 
             }
            
