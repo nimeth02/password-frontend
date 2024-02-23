@@ -46,7 +46,7 @@ function Signin() {
        if (typeof window !== 'undefined') {
                        localStorage.setItem("userInfo", JSON.stringify(data.token.token));
       localStorage.setItem("userData", JSON.stringify(data.token.existUser));
-           router.push('/')
+           router.push('/', undefined, { shallow: true, scroll: false, reload: true })
                     }
       
       setUser(initialUser)
