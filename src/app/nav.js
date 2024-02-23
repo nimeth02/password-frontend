@@ -15,8 +15,11 @@ function Nav() {
                     }
    
   }
-  console.log(JSON.parse(localStorage.getItem("userData")))
+   if (typeof window !== 'undefined') {
+                        console.log(JSON.parse(localStorage.getItem("userData")))
   const User = JSON.parse(localStorage.getItem("userData"))
+                    }
+ 
   return (
     <div className='flex flex-col justify-center items-center h-[100vh] fixed '>
       <div className='flex flex-col justify-between gap-10  rounded-r-xl bg-cyan-500 px-1 py-4'>
