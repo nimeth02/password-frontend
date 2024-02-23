@@ -43,10 +43,14 @@ function Signin() {
         progress: undefined,
         theme: "light"
       });
-      localStorage.setItem("userInfo", JSON.stringify(data.token.token));
+       if (typeof window !== 'undefined') {
+                       localStorage.setItem("userInfo", JSON.stringify(data.token.token));
       localStorage.setItem("userData", JSON.stringify(data.token.existUser));
+           router.push('/')
+                    }
+      
       setUser(initialUser)
-      router.push('/')
+    
     } catch (error) {
       console.log(error.response.data.message)
       toast.error(error.response.data.message, {
