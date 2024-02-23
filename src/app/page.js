@@ -12,7 +12,6 @@ function Home() {
      if (typeof window !== 'undefined') {
                       const user = JSON.parse(localStorage.getItem("userInfo"));
     if (!user) {router.push("/signin")}
-    else{router.push("/")}
                     }
    
   },[])
