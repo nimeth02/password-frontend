@@ -9,8 +9,11 @@ function Nav() {
   const router = useRouter()
   const handleLogout = () => {
     console.log("logout")
-    localStorage.removeItem("userInfo")
+     if (typeof window !== 'undefined') {
+                        localStorage.removeItem("userInfo")
     router.push("/signin")
+                    }
+   
   }
   console.log(JSON.parse(localStorage.getItem("userData")))
   const User = JSON.parse(localStorage.getItem("userData"))
